@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -67,11 +68,14 @@ public void onClick(View view){
         call.getAllWeatherInfo (city, new InfoForOneCity ( ) {
             @Override
             public void getAllWeatherInfo(AllWeatherInfo allWeatherInfo) {
-                arrayList.add (0,allWeatherInfo);
-                recyclerAdapter = new CustomAdapter (arrayList, getBaseContext ( ));
-                recyclerView.setAdapter (recyclerAdapter);
-            }
-        });
+                if (allWeatherInfo != null) {
+                    arrayList.add (0, allWeatherInfo);
+                    recyclerAdapter = new CustomAdapter (arrayList, getBaseContext ( ));
+                    recyclerView.setAdapter (recyclerAdapter);
+                } else {
+                    Toast.makeText (getBaseContext ( ), getString (R.string.Error), Toast.LENGTH_SHORT).show ( );
+                }
+            }});
 }
 public void fillAutoCompleteView(){
         String []array= getResources ( ).getStringArray (R.array.autuCompleteCity);

@@ -9,6 +9,6 @@
         <item name="Madrid">Madrid</item>
         <item name="London">London</item>
         <item name="Riyadh">Riyadh</item>
-
     </string-array>
+    <string name="Error">there are error in city name</string>
 </resources>

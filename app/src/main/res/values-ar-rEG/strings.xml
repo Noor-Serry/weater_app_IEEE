@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">weather</string>
     <string name="City_name">اسم المدينه</string>
+    <string name="Error">هناك خطاء في اسم المدينه</string>
 </resources>
