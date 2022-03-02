@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">weather</string>
+    <string name="City_name">City Name</string>
+    <string-array name="autuCompleteCity">
+        <item name="Delhi">Delhi</item>
+        <item name="Amsterdam">Amsterdam</item>
+        <item name="Oslo">Oslo</item>
+        <item name="Doha">Doha</item>
+        <item name="Madrid">Madrid</item>
+        <item name="London">London</item>
+        <item name="Riyadh">Riyadh</item>
+
+    </string-array>
+</resources>
